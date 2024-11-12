@@ -1,0 +1,86 @@
+{
+    "lists": {
+        "dango": [
+            "200g farinha de arroz",
+            "100g farinha de trigo",
+            "180ml água",
+            "4 colheres de sopa de açúcar",
+            "2 colheres de sopa de molho de soja",
+            "2 colheres de sopa de mirin",
+            "1 colher de sopa de açúcar mascavo"
+        ],
+        "dorayaki": [
+            "200g farinha de trigo",
+            "2 ovos",
+            "100g açúcar",
+            "1 colher de chá de fermento em pó",
+            "80ml água",
+            "300g pasta de feijão azuki"
+        ],
+        "manju": [
+            "200g farinha de trigo",
+            "100g açúcar",
+            "100ml água",
+            "1 colher de chá de fermento em pó",
+            "300g pasta de feijão azuki"
+        ],
+        "omurice": [
+            "2 xícaras de arroz cozido",
+            "100g peito de frango em cubos",
+            "1/2 cebola picada",
+            "2 colheres de sopa de ketchup",
+            "2 ovos",
+            "1 colher de sopa de manteiga",
+            "Sal a gosto",
+            "Pimenta a gosto"
+        ],
+        "oyakodon": [
+            "200g peito de frango em cubos",
+            "1/2 cebola fatiada",
+            "2 ovos",
+            "200ml caldo dashi",
+            "2 colheres de sopa de molho de soja",
+            "1 colher de sopa de mirin",
+            "1 colher de chá de açúcar",
+            "2 xícaras de arroz cozido"
+        ],
+        "ramen": [
+            "200g macarrão para ramen",
+            "500ml caldo dashi",
+            "1 colher de sopa de molho de soja",
+            "1 colher de chá de óleo de gergelim",
+            "1 ovo cozido",
+            "100g carne de porco fatiada",
+            "1 folha de alga nori",
+            "Cebolinha a gosto"
+        ],
+        "sushi": [
+            "2 xícaras de arroz para sushi",
+            "2 colheres de sopa de vinagre de arroz",
+            "1 colher de sopa de açúcar",
+            "1/2 colher de chá de sal",
+            "150g de peixe cru (atum, salmão ou outro)",
+            "Folhas de alga nori",
+            "Molho de soja para servir"
+        ],
+        "tempura": [
+            "200g camarão ou legumes variados",
+            "100g farinha de trigo",
+            "1 gema de ovo",
+            "150ml água gelada",
+            "Óleo para fritar",
+            "Molho de soja para servir"
+        ]
+    },
+    "texts": {
+        "fuji": "O icônico Monte Fuji, Patrimônio Mundial da UNESCO, é um símbolo do Japão, oferecendo vistas deslumbrantes e trilhas desafiadoras para aventureiros e amantes da natureza.",
+        "kinkakuji": "Também conhecido como Pavilhão Dourado, o Kinkaku-ji em Quioto é famoso por sua arquitetura deslumbrante e jardins reflexivos, representando a harmonia entre natureza e construção.",
+        "shinjuku": "O parque Shinjuku Gyoen em Tóquio é um local perfeito para admirar as flores de cerejeira na primavera, oferecendo tranquilidade em meio à agitação da cidade.",
+        "himeji": "O Castelo de Himeji, Patrimônio Mundial da UNESCO, é conhecido por sua beleza arquitetônica e design defensivo, sendo um dos castelos mais bem preservados do Japão.",
+        "gion": "Gion, em Kyoto, é um tradicional bairro de gueixas, famoso por suas casas de chá e atmosfera histórica, onde os visitantes podem vivenciar a cultura japonesa.",
+        "miyajima": "A ilha de Miyajima abriga o famoso torii flutuante do Santuário Itsukushima, oferecendo vistas espetaculares e uma rica cultura, além de trilhas naturais.",
+        "nara": "Nara Park é lar de veados que circulam livremente e abriga o grande Templo Todai-ji, conhecido pela enorme estátua de Buda, proporcionando uma experiência única.",
+        "kyoto": "O Caminho do Filósofo em Quioto é um agradável percurso ao longo de um canal, cercado por árvores de cerejeira, ideal para reflexões e passeios relaxantes.",
+        "okinawa": "Okinawa é famosa por suas belas praias de areia branca e águas cristalinas, oferecendo um destino tropical e relaxante, rico em cultura e culinária local."
+    }
+}

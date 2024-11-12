@@ -1,0 +1,205 @@
+/**
+  Regras do Tailwind
+**/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+  Root e elementos base
+**/
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /*overscroll-behavior-y: none;*/
+  --red: hsl(346, 100%, 40%);
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/**
+  Fontes
+**/
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../public/fonts/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../public/fonts/Poppins-SemiBold.ttf');
+}
+
+/**
+  Animações
+**/
+@keyframes fade-linear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+    box-shadow: inset 0px 0px 0px hsl(0, 0%, 0%, 0.5);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(4px);
+    box-shadow: inset 0px 10px 20px hsl(0, 0%, 0%, 0.5);
+
+  }
+}
+
+/**
+  Links
+**/
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/**
+  Headings
+**/
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+main h2 {
+  @apply -text-[1.75rem] -text-[hsl(0,0%,30%)] poppins-semibold -tracking-wide -leading-6 -mb-8 -pb-0
+}
+main h3 {
+  @apply -text-[hsl(0,0%,30%)] poppins-regular
+}
+
+/**
+  Navbar
+**/
+header a {
+  @apply -text-[hsl(0,0%,90%)] hover:-text-[hsl(0,0%,100%)] -no-underline -font-bold -tracking-wide text-shadow
+}
+header nav > a {
+  @apply -tracking-wider text-shadow -text-[1.2rem] -font-semibold -uppercase
+}
+.active {
+  color: hsl(0, 0%, 100%);
+  position: relative;
+}
+.active::after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 50%;
+  translate: -50% 0%;
+  width: 75%;
+  height: 2px;
+  background: var(--red);
+}
+
+/**
+  Conteudo principal
+**/
+main section {
+  @apply -container -max-w-5xl -mx-auto -flex -flex-col md:-flex-row -gap-4
+}
+
+img {
+  background-position: center -2rem;
+  background-size: cover;
+}
+
+main article:not(.textos) {
+  @apply -container -flex -flex-col -w-full -rounded-xl hover:-drop-shadow-lg -cursor-pointer -bg-slate-300 -text-black
+}
+
+main article:not(.clock,.article, .textos):hover h3 {
+  color: var(--red);
+  transition: all 500ms ease;
+}
+main article:not(.clock, .textos):hover img {
+  filter: brightness(0.66);
+  transition: filter 500ms ease;
+}
+main .textos img {
+  @apply -w-full -aspect-[3/2] -object-cover -object-[center,70%] -rounded-xl
+}
+main .textos p {
+  @apply -my-6
+}
+main .textos p:first-of-type {
+  @apply -mb-6 -mt-0
+}
+main .textos p:last-of-type {
+  @apply -mt-6
+}
+
+
+/**
+  Carrossel de imagens
+**/
+.carroussel img {
+  @apply -rounded-xl -w-full -object-cover -h-max -object-center -aspect-[2/3]
+}
+.transition-fast-ease {
+  transition: all 250ms ease;
+}
+.carousel-container {
+  transition: all 250ms ease-in-out;
+}
+.carousel-animate {
+  animation: fade 500ms ease alternate-reverse;
+}
+
+/**
+  Classes para one-liners
+**/
+.text-shadow {
+  text-shadow: 0px 0px 5px hsl(0, 0%, 50%, 0.5);
+}
+.poppins-regular {
+  font-family: Poppins-Regular;
+}
+.poppins-semibold {
+  font-family: Poppins-SemiBold;
+}
+
+/**
+  Mediaquerie para esquema de cores / tema
+**/
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

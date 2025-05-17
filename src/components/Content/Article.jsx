@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
+import lists_and_texts from "../../../public/lists_and_texts.json"
 
 export default function Article(props) {
 
@@ -10,29 +11,11 @@ export default function Article(props) {
     const imgSrc = `images/${pathImg}/${itemName}.jpg`
     const imgAlt = `Imagem de ${itemName}`
 
-    const [hidden, setHidden] = useState(false)
-    const [data, setData] = useState(null)
+    const [data, setData] = useState(lists_and_texts)
     const [dataType, setDataType] = useState(null)
     const [item, setItem] = useState(null)
     const [showList, setShowList] = useState([])
     const [showText, setShowText] = useState("")
-
-    // fetch de json, simulando uma requisição 
-    useEffect(() => {
-        const fetchData = async () => {
-
-            try {
-                const response = await fetch('/lists_and_texts.json')
-                const dataJson = await response.json()
-
-                setData(dataJson)
-            }
-            catch(error) {
-                console.log(`Erro: ${error}`)
-            }
-        }
-        fetchData()
-    }, [])
 
     // checa a categoria e nome do item
     useEffect(() => {
@@ -84,8 +67,6 @@ export default function Article(props) {
             catch(error) {
                 console.log(`Erro: ${error}`)
             }
-
-            console.log(data[dataType][item])
         }
     }, [item])
 

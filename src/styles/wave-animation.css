@@ -1,0 +1,16 @@
+@keyframes wave-animation {
+    0% {
+        background-position: 0% bottom;
+    }
+    100% {
+        background-position: 100% bottom;
+    }
+}
+
+/* Aplicar animação apenas em telas menores que md (768px) */
+@media (max-width: 767px) {
+    .wave-animate {
+        animation: wave-animation 4s ease-in-out infinite alternate;
+        background-size: 200% 100% !important;
+    }
+}

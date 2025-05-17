@@ -1,5 +1,6 @@
 import Header from "./Header"
 import Clock from "../Content/Clock"
+import "../../styles/wave-animation.css"
 
 export default function Hero() {
 
@@ -7,7 +8,7 @@ export default function Hero() {
         <section className="-relative -h-[66dvh] md:-h-[57.5dvh]
         -outline -bg-[hsl(0,0,20%)] -bg-[url('/images/misc/wave.gif')]
         md:-bg-[url('/images/misc/wave.jpg')] -bg-cover -bg-no-repeat
-        -bg-bottom md:-bg-center -text-[hsl(0,0%,95%)]">
+        -bg-bottom md:-bg-center -text-[hsl(0,0%,95%)] wave-animate">
             <Header></Header>
             <div className="-container -max-w-4xl -relative -top-2/4 -mx-auto">
                 <div className="-p-4 lg:-px-0 -backdrop-blur-[1px] text-shadow">

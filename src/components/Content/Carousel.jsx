@@ -22,9 +22,8 @@ export default function Carousel({ children = [] }) {
             // encontrando o meio do carousel
             const middlePos = carouselSize % 2 === 0 ? carouselSize / 2 : Math.ceil(carouselSize / 2)
             
-            // corrigindo o tamanho do carousel (100% * tamanho )
-            carouselContainer.current.style.width = `${carouselSize}00%`
-            carouselContainer.current.style.left = `-${middlePos - 1}00%`
+            // Não precisamos definir o width aqui pois está definido inline no elemento
+            // Definindo a posição inicial
 
             // inicia a posição do carousel no centro
             setPosX(p => p + middlePos)
@@ -38,11 +37,15 @@ export default function Carousel({ children = [] }) {
         if(posX !== null) {
             
             // faz o loop da posição quando chega nas pontas
-            posX > carouselSize ? setPosX(p => p = 1) : posX
-            posX <= 0 ? setPosX(p => p + (carouselSize)) : posX
+            if (posX > carouselSize) {
+                setPosX(1)
+            } else if (posX <= 0) {
+                setPosX(carouselSize)
+            }
 
             // move o container do carousel conforme o estado de posX 
-            carouselContainer.current.style.left = `-${posX - 1}00%`
+            const translateAmount = ((posX - 1) * (100 / carouselSize))
+            carouselContainer.current.style.transform = `translateX(-${translateAmount}%)`
             //carouselContainer.current.style.animation = "fade 500ms ease alternate"
 
             animate !== false ? setAnimate(false) : null
@@ -78,8 +81,12 @@ export default function Carousel({ children = [] }) {
                     <i className="fa fa-chevron-right -text-[1.25rem]"></i>
                 </button>
             </div>
-            <div className="-relative -flex -flex-row carousel-container -m-0 -p-0 -text-center" ref={carouselContainer}>
-                {children}
+            <div className="-relative -flex -flex-nowrap carousel-container -m-0 -p-0 -text-center" style={{ width: `${carouselSize * 100}%`, transition: 'transform 0.3s ease' }} ref={carouselContainer}>
+                {React.Children.map(children, child => (
+                    <div style={{ width: `${100 / carouselSize}%` }}>
+                        {child}
+                    </div>
+                ))}
             </div>
         </section>
     )

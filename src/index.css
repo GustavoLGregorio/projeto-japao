@@ -179,7 +179,7 @@ main .textos p:last-of-type {
   Classes para one-liners
 **/
 .text-shadow {
-  text-shadow: 0px 0px 5px hsl(0, 0%, 50%, 0.5);
+  text-shadow: 2px 2px 0px #213547;
 }
 .poppins-regular {
   font-family: Poppins-Regular;

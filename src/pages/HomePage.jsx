@@ -54,7 +54,7 @@ export default function HomePage() {
             className="-container -grid -grid-cols-1 md:-grid-cols-2 lg:-grid-cols-1"
             aria-label="Conteudos sobre o Japão"
           >
-            <div className="-flex -flex-col md:-gap-4 lg:-gap-y-0">
+            <div className="-flex -flex-col -gap-y-4 lg:-gap-y-0">
               <Link to="/culinaria" className="-no-underline">
                 <Card
                   titulo="Culinária"
@@ -85,7 +85,7 @@ export default function HomePage() {
           </section>
         </aside>
 
-        {window.innerWidth >= 768 ? 
+        {window.innerWidth >= 762 ? 
           <section className="-col-span-full -h-full -w-full -overflow-hidden carroussel">
             <div className="-w-max -grid -grid-cols-6 -gap-x-2 -place-content-center">
               <ImgCarousel caminhoImg="carousel" item="samurai.jpg"></ImgCarousel>
